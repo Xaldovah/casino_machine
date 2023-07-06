@@ -1,6 +1,6 @@
 Casino Machine
 
-This repository contains Python code that simulates a casino machine. The program allows users to play various games, such as slot machines or card games, and provides a fun and interactive experience.
+This repository contains Python code that simulates a casino machine. The program allows users to play the slot machine game, and provides a fun and interactive experience.
 
 Features:
 
