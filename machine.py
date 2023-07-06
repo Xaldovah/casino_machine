@@ -9,14 +9,14 @@ MIN_BET = 1
 ROWS = 3
 COLS = 3
 
-symbol_count = {
+SYMBOL_COUNT = {
     "A": 2,
     "B": 4,
     "C": 6,
     "D": 8
 }
 
-symbol_value = {
+SYMBOL_VALUE = {
     "A": 5,
     "B": 4,
     "C": 3,
@@ -69,8 +69,8 @@ def get_slot_machine_spin(rows, cols, symbols):
 
     """
     all_symbols = []
-    for symbol, symbol_count in symbols.items():
-        for _ in range(symbol_count):
+    for symbol, SYMBOL_COUNT in symbols.items():
+        for _ in range(SYMBOL_COUNT):
             all_symbols.append(symbol)
 
     columns = []
@@ -195,9 +195,9 @@ def spin(balance):
 
     print(f"You are betting ${bet} on {lines} lines. Total bet = ${total_bet}")
 
-    slots = get_slot_machine_spin(ROWS, COLS, symbol_count)
+    slots = get_slot_machine_spin(ROWS, COLS, SYMBOL_COUNT)
     print_slot_machine(slots)
-    winnings, winning_lines = check_winnings(slots, lines, bet, symbol_value)
+    winnings, winning_lines = check_winnings(slots, lines, bet, SYMBOL_VALUE)
 
     if winnings > 0:
         print(f"You won ${winnings}!")
